@@ -97,8 +97,45 @@ namespace ResizePicture
 
                 Image image = Image.FromFile(strInputPathame);
 
-                int iWidth = m_RadioBtnPercentage.Checked ? image.Width * int.Parse(m_TxtBoxHorizontal.Text) / 100 : int.Parse(m_TxtBoxHorizontal.Text);
-                int iHeight = m_RadioBtnPercentage.Checked ? image.Height * int.Parse(m_TxtBoxVertical.Text) / 100 : int.Parse(m_TxtBoxVertical.Text);
+                int iWidth = 0;
+                int iHeight = 0;
+                if (m_RadioBtnPercentage.Checked)
+                {
+                    iWidth = image.Width * int.Parse(m_TxtBoxHorizontal.Text) / 100;
+                    iHeight = image.Height * int.Parse(m_TxtBoxVertical.Text) / 100;
+                }
+                else if (m_RadioBtnPixels.Checked)
+                {
+                    iWidth = int.Parse(m_TxtBoxHorizontal.Text);
+                    iHeight = int.Parse(m_TxtBoxVertical.Text);
+                }
+                else if (m_RadioBtnHalf.Checked)
+                {
+                    iWidth = image.Width / 2;
+                    iHeight = image.Height / 2;
+                }
+                else if (m_RadioBtnOneThird.Checked)
+                {
+                    iWidth = image.Width / 3;
+                    iHeight = image.Height / 3;
+                }
+                else if (m_RadioBtnQuarter.Checked)
+                {
+                    iWidth = image.Width / 4;
+                    iHeight = image.Height / 4;
+                }
+                else if (m_RadioBtnOneFifth.Checked)
+                {
+                    iWidth = image.Width / 5;
+                    iHeight = image.Height / 5;
+                }
+
+                if (iWidth == 0 || iHeight == 0)
+                {
+                    m_LabelInfro.Text = "Image width or height should not be 0!";
+
+                    return;
+                }
 
                 Bitmap bitmap = new Bitmap(iWidth, iHeight);
                 Graphics graphics = Graphics.FromImage(bitmap);

@@ -54,6 +54,11 @@
             this.m_ProgressBarResize = new System.Windows.Forms.ProgressBar();
             this.m_TrackBarQuality = new System.Windows.Forms.TrackBar();
             this.m_GroupBoxQuality = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.m_RadioBtnOneFifth = new System.Windows.Forms.RadioButton();
+            this.m_RadioBtnQuarter = new System.Windows.Forms.RadioButton();
+            this.m_RadioBtnOneThird = new System.Windows.Forms.RadioButton();
+            this.m_RadioBtnHalf = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -115,6 +120,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.m_RadioBtnOneFifth);
+            this.groupBox2.Controls.Add(this.m_RadioBtnQuarter);
+            this.groupBox2.Controls.Add(this.m_RadioBtnOneThird);
+            this.groupBox2.Controls.Add(this.m_RadioBtnHalf);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.m_TxtBoxHorizontal);
@@ -223,6 +233,39 @@
             this.m_GroupBoxQuality.Name = "m_GroupBoxQuality";
             this.m_GroupBoxQuality.TabStop = false;
             // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // m_RadioBtnOneFifth
+            // 
+            resources.ApplyResources(this.m_RadioBtnOneFifth, "m_RadioBtnOneFifth");
+            this.m_RadioBtnOneFifth.Name = "m_RadioBtnOneFifth";
+            this.m_RadioBtnOneFifth.TabStop = true;
+            this.m_RadioBtnOneFifth.UseVisualStyleBackColor = true;
+            // 
+            // m_RadioBtnQuarter
+            // 
+            resources.ApplyResources(this.m_RadioBtnQuarter, "m_RadioBtnQuarter");
+            this.m_RadioBtnQuarter.Name = "m_RadioBtnQuarter";
+            this.m_RadioBtnQuarter.TabStop = true;
+            this.m_RadioBtnQuarter.UseVisualStyleBackColor = true;
+            // 
+            // m_RadioBtnOneThird
+            // 
+            resources.ApplyResources(this.m_RadioBtnOneThird, "m_RadioBtnOneThird");
+            this.m_RadioBtnOneThird.Name = "m_RadioBtnOneThird";
+            this.m_RadioBtnOneThird.TabStop = true;
+            this.m_RadioBtnOneThird.UseVisualStyleBackColor = true;
+            // 
+            // m_RadioBtnHalf
+            // 
+            resources.ApplyResources(this.m_RadioBtnHalf, "m_RadioBtnHalf");
+            this.m_RadioBtnHalf.Name = "m_RadioBtnHalf";
+            this.m_RadioBtnHalf.TabStop = true;
+            this.m_RadioBtnHalf.UseVisualStyleBackColor = true;
+            // 
             // FormImageResizer
             // 
             resources.ApplyResources(this, "$this");
@@ -277,6 +320,11 @@
         private System.Windows.Forms.ProgressBar m_ProgressBarResize;
         private System.Windows.Forms.TrackBar m_TrackBarQuality;
         private System.Windows.Forms.GroupBox m_GroupBoxQuality;
+        private System.Windows.Forms.RadioButton m_RadioBtnOneFifth;
+        private System.Windows.Forms.RadioButton m_RadioBtnQuarter;
+        private System.Windows.Forms.RadioButton m_RadioBtnOneThird;
+        private System.Windows.Forms.RadioButton m_RadioBtnHalf;
+        private System.Windows.Forms.Label label7;
     }
 }
 
