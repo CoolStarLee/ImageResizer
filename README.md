@@ -1,2 +1,2 @@
 # ImageResizer
-A tool to resize the all the images under the input folder.
+A tool to resize all the images under the input folder.
